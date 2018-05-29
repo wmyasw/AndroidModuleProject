@@ -6,6 +6,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
+import org.simpleframework.xml.Serializer;
+import org.simpleframework.xml.core.Persister;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
