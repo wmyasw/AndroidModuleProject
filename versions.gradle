@@ -36,6 +36,7 @@ versions.arouter_api = "1.3.1"
 //okgo
 versions.okgo = "3.0.4"
 versions.imagepicker = "0.6.1"
+versions.chuck = "1.0.4"
 //权限校验
 versions.permission='2.0.0-rc4'
 
@@ -77,6 +78,12 @@ kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
 kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
 deps.kotlin = kotlin
 
+def Okhttp = [:]
+//必须使用
+Okhttp.okgo = "com.lzy.net:okgo:$versions.okgo"
+Okhttp.imagepicker = "com.lzy.widget:imagepicker:$versions.imagepicker"
+Okhttp.chuck = "com.readystatesoftware.chuck:library:$versions.chuck"
+deps.Okhttp=Okhttp
 //view
 deps.constraint_layout = "com.android.support.constraint:constraint-layout:$versions.constraint_layout"
 deps.qmui = "com.qmuiteam:qmui:$versions.qmui"
@@ -85,6 +92,10 @@ deps.swipe_recycler = "com.yanzhenjie:recyclerview-swipe:$versions.swipe_recycle
 deps.easy_recycler = "com.jude:easyrecyclerview:$versions.easy_recycler"
 deps.photo_view = "com.github.chrisbanes:PhotoView:$versions.photo_view"
 deps.material_dialog = "com.afollestad.material-dialogs:core:$versions.material_dialog"
+//okgo
+deps.okgo = "com.lzy.net:okgo:$versions.okgo"
+deps.imagepicker = "com.lzy.widget:imagepicker:$versions.imagepicker"
+deps.chuck =  "com.readystatesoftware.chuck:library:$versions.chuck"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.rxjava2 = "io.reactivex.rxjava2:rxjava:$versions.rxjava2"
@@ -108,10 +119,7 @@ retrofit.adapter = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofi"
 retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
 deps.retrofit = retrofit
 
-def Okhttp = [:]
-//必须使用
-Okhttp.okgo = "com.lzy.net:okgo:$versions.okgo"
-Okhttp.imagepicker = "com.lzy.widget:imagepicker:$versions.imagepicker"
+
 //权限校验
 deps.permission = "com.yanzhenjie:permission:$versions.permission"
 ext.deps = deps

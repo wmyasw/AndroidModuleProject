@@ -48,12 +48,12 @@ public class DataTypeAdaptor extends TypeAdapter<ResultEntity> {
         }
 
         out.beginObject();
-        out.name("errcode");
-        gson.getAdapter(Long.class).write(out, value.getErrcode());
-        out.name("errmsg");
-        gson.getAdapter(String.class).write(out, value.getErrmsg());
-        out.name("data");
-        gson.getAdapter(Object.class).write(out, value.getData());
+        out.name("showapi_res_code");
+        gson.getAdapter(Long.class).write(out, value.getShowapi_res_code());
+        out.name("showapi_res_error");
+        gson.getAdapter(String.class).write(out, value.getShowapi_res_error());
+        out.name("showapi_res_body");
+        gson.getAdapter(Object.class).write(out, value.getShowapi_res_body());
         out.endObject();
     }
 
@@ -61,9 +61,9 @@ public class DataTypeAdaptor extends TypeAdapter<ResultEntity> {
     public ResultEntity read(JsonReader in) throws IOException {
         ResultEntity data = new ResultEntity();
         Map<String, Object> dataMap = (Map<String, Object>) readInternal(in);
-        data.setErrcode((Long) dataMap.get("code"));
-        data.setErrmsg((String) dataMap.get("msg"));
-        data.setData((List) dataMap.get("data"));
+        data.setShowapi_res_code((Long) dataMap.get("showapi_res_code"));
+        data.setShowapi_res_error((String) dataMap.get("showapi_res_error"));
+        data.setShowapi_res_body((List) dataMap.get("showapi_res_body"));
         return data;
     }
 

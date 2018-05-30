@@ -41,11 +41,11 @@ dependencies {
     api deps.constraint_layout
 
     // RxJava and retrofit
-    api deps.rx_android
-    api deps.rxjava2
-    api deps.retrofit.runtime
-    api deps.retrofit.gson
-    api deps.persistent_cookie
+//    api deps.rx_android
+//    api deps.rxjava2
+//    api deps.retrofit.runtime
+//    api deps.retrofit.gson
+//    api deps.persistent_cookie
 
     //Dagger
     api deps.dagger.runtime
@@ -67,6 +67,9 @@ dependencies {
     api deps.logger
     api deps.toasty
 
+    api deps.okgo
+    api deps.chuck
+    api deps.imagepicker
     //router
     api deps.arouter_api
 

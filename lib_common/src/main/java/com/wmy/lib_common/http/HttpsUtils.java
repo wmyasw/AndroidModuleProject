@@ -6,6 +6,7 @@ import android.text.TextUtils;
 
 
 import com.wmy.lib_common.utils.CloseUtils;
+import com.wmy.lib_common.utils.Utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -45,6 +46,7 @@ import javax.net.ssl.X509TrustManager;
  * @name HttpsUtils
  */
 public class HttpsUtils {
+
 
 
     public static class SSLParams {
