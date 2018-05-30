@@ -5,7 +5,10 @@
     <application android:theme="@style/AppTheme">
         <activity
             android:name=".LotteryMainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".LotteryOpenPrizeActivity">
+        </activity>
     </application>
+
 </manifest>

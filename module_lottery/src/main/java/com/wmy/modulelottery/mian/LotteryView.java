@@ -24,13 +24,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/2/22 20:33
- * @version V1.2.0
- * @name GirlsView
+ * @author wmy
+ * @Description: 彩票列表
+ * @FileName: LotteryView
+ * @Date 2018/5/30/030 20:31
  */
-public class LotteryView extends FrameLayout implements LotteryContract.View, SwipeRefreshLayout.OnRefreshListener, RecyclerArrayAdapter.OnLoadMoreListener {
+public class LotteryView extends FrameLayout implements LotteryContract.View<LotteryBean>, SwipeRefreshLayout.OnRefreshListener, RecyclerArrayAdapter.OnLoadMoreListener {
 
     private LotteryContract.Presenter mPresenter;
     private boolean mActive;
@@ -43,7 +42,7 @@ public class LotteryView extends FrameLayout implements LotteryContract.View, Sw
     private int page = 1;
     private int size = 20;
 
-    public LotteryView(Context context) {
+    public LotteryView(Context context,int type) {
         super(context);
         initView();
     }
@@ -104,6 +103,7 @@ public class LotteryView extends FrameLayout implements LotteryContract.View, Sw
 
     @Override
     public void setPresenter(LotteryContract.Presenter presenter) {
+
         this.mPresenter = presenter;
     }
 

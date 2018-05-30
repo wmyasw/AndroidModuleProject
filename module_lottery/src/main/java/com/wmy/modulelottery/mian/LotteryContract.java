@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface LotteryContract {
 
-    interface View extends BaseView<Presenter> {
+    interface View<T> extends BaseView<Presenter> {
 
         /**
          * View 的存活状态
@@ -24,9 +24,9 @@ public interface LotteryContract {
          */
         boolean isActive();
 
-        void refresh(List<LotteryBean> data);
+        void refresh(List<T> data);
 
-        void load(List<LotteryBean> data);
+        void load(List<T> data);
 
         void showError();
 

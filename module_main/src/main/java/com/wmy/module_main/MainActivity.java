@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.news_button) {
             //跳转到NewsCenterActivity
-            ARouter.getInstance().build("/login").navigation();
+            ARouter.getInstance().build( "/lotter/openPrize").navigation();
         } else if (view.getId() == R.id.girls_button) {
             //跳转到GirlsActivity
             ARouter.getInstance().build("/lotter/list").navigation();

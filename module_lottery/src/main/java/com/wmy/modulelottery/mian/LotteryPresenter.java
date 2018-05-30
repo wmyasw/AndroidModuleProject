@@ -31,7 +31,7 @@ public class LotteryPresenter implements LotteryContract.Presenter {
 
     @Override
     public void getData(int page, int size, boolean isRefresh) {
-        mDataSource.getLotterys(size, page, new DataSource.LoadLotteryCallback() {
+        mDataSource.getLotterys(size, page, new DataSource.LoadLotteryCallback<LotteryBean>() {
             @Override
             public void onGirlsLoaded(List<LotteryBean> lotteryBeanList) {
                 if (isRefresh) {
@@ -41,6 +41,7 @@ public class LotteryPresenter implements LotteryContract.Presenter {
                 }
                 mView.showNormal();
             }
+
 
             @Override
             public void onDataNotAvailable() {

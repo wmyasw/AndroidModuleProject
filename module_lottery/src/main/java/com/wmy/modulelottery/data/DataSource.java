@@ -6,15 +6,16 @@ import com.wmy.modulelottery.mian.LotteryPresenter;
 
 import java.util.List;
 
-public interface DataSource {
+public interface DataSource<T>{
 
-    interface LoadLotteryCallback {
+    interface LoadLotteryCallback<T> {
 
-        void onGirlsLoaded(List<LotteryBean> lotteryBeanList);
+        void onGirlsLoaded(List<T> lotteryBeanList);
 
         void onDataNotAvailable();
     }
 
     void getLotterys(int size, int page, LoadLotteryCallback callback);
 
+    void getLotteryOpenPrizeData(LoadLotteryCallback callback);
 }
