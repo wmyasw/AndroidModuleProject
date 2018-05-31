@@ -37,7 +37,7 @@ import okhttp3.OkHttpClient;
  */
 public class BaseApplication extends Application {
 
-    public static final String ROOT_PACKAGE = "com.guiying.module";
+    public static final String ROOT_PACKAGE = "com.wmy.module";
 
     private static BaseApplication sInstance;
 

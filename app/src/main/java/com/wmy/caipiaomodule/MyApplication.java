@@ -77,6 +77,7 @@ public class MyApplication extends BaseApplication {
 
         @Override
         public void send(Context context, CrashReportData crashReportData) throws ReportSenderException {
+
             EmailIntentSender emailSender = new EmailIntentSender(getApplicationContext());
             emailSender.send(context, crashReportData);
         }

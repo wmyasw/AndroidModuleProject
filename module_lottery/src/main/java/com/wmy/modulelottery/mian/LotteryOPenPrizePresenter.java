@@ -13,12 +13,12 @@ import java.util.List;
  * @version V1.2.0
  * @name GirlsPresenter
  */
-public class LotteryPresenter implements LotteryContract.Presenter {
+public class LotteryOPenPrizePresenter implements LotteryContract.Presenter {
 
     private LotteryContract.View mView;
     private DataSource mDataSource;
 
-    public LotteryPresenter(LotteryContract.View view) {
+    public LotteryOPenPrizePresenter(LotteryContract.View view) {
         mView = view;
         mView.setPresenter(this);
         mDataSource = new LotteryDataSource();
@@ -31,7 +31,8 @@ public class LotteryPresenter implements LotteryContract.Presenter {
 
     @Override
     public void getData(int page, int size, boolean isRefresh) {
-        mDataSource.getLotterys(size, page, new DataSource.LoadLotteryCallback<LotteryBean>() {
+        mDataSource.getLotteryOpenPrizeData(new DataSource.LoadLotteryCallback<LotteryBean>(){
+
             @Override
             public void onDataLoaded(List<LotteryBean> lotteryBeanList) {
                 if (isRefresh) {
@@ -41,7 +42,6 @@ public class LotteryPresenter implements LotteryContract.Presenter {
                 }
                 mView.showNormal();
             }
-
 
             @Override
             public void onDataNotAvailable() {

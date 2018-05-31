@@ -10,7 +10,7 @@ public interface DataSource<T>{
 
     interface LoadLotteryCallback<T> {
 
-        void onGirlsLoaded(List<T> lotteryBeanList);
+        void onDataLoaded(List<T> lotteryBeanList);
 
         void onDataNotAvailable();
     }

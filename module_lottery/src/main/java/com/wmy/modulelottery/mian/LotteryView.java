@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.AttributeSet;
@@ -41,9 +42,13 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
     private ArrayList<LotteryBean> mData;
     private int page = 1;
     private int size = 20;
-
+    private int type=0;//默认为彩票列表
+    public LotteryView(Context context) {
+        this(context,0);
+    }
     public LotteryView(Context context,int type) {
         super(context);
+        this.type=type;
         initView();
     }
 
@@ -60,9 +65,11 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         mGirlsRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new LotteryAdapter(getContext());
-
+        mAdapter = new LotteryAdapter(getContext(),type);
         mGirlsRecyclerView.setAdapterWithProgress(mAdapter);
+        //添加分割线
+        mGirlsRecyclerView.addItemDecoration(
+                new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         mGirlsRecyclerView.setRefreshingColor(
                 ContextCompat.getColor(getContext(), R.color.colorPrimary),
                 ContextCompat.getColor(getContext(), android.R.color.holo_blue_light),

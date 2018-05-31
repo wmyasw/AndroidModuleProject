@@ -41,7 +41,7 @@ public class LotteryBean implements Serializable {
      */
 
     private String expect;
-    private int timestamp;
+    private String timestamp;
     private String time;
     private String name;
     private String openCode;
@@ -127,11 +127,11 @@ public class LotteryBean implements Serializable {
         this.expect = expect;
     }
 
-    public int getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(int timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 

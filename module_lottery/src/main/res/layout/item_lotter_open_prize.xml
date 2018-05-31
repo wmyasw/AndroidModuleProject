@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_ex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="双色球"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_12sp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_code"   android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_open_number"
+        android:layout_toRightOf="@+id/tv_ex"
+        android:gravity="center_vertical"
+        android:text="11111"
+        android:textSize="@dimen/text_size_10sp"/>
+
+    <TextView
+        android:id="@+id/tv_open_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_code"
+        android:layout_alignEnd="@+id/tv_code"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/tv_code"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="双色球"
+        android:textSize="@dimen/text_size_10sp"/>
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_ex"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:text="开奖号码"
+        android:textSize="@dimen/text_size_12sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ptyd_txrzrxx_icon_d"/>
+</RelativeLayout>

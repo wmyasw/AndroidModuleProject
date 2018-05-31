@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">module.lottery</string>
+    <string name="open_time">开奖日期:%1$s</string>
+    <string name="open_number">第%1$s期</string>
 </resources>
