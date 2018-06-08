@@ -8,13 +8,11 @@ import com.wmy.lib_common.base.ViewManager;
 import com.wmy.modulelottery.frament.OneFragment;
 import com.wmy.modulelottery.frament.OpenPrizeFragment;
 import com.wmy.modulelottery.frament.TowFragment;
-
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/9/20 22:29
- * @version V2.8.3
- * @name MyDelegate
+ * @author wmy
+ * @Description:
+ * @FileName: MyDelegate
+ * @Date 2018/6/8/008 10:22
  */
 @Keep
 public class MyDelegate implements IApplicationDelegate {
@@ -30,16 +28,16 @@ public class MyDelegate implements IApplicationDelegate {
 
     @Override
     public void onTerminate() {
-
+        Logger.d("onTerminate");
     }
 
     @Override
     public void onLowMemory() {
-
+        Logger.d("onLowMemory");
     }
 
     @Override
     public void onTrimMemory(int level) {
-
+        Logger.d("onTrimMemory level:"+level);
     }
 }

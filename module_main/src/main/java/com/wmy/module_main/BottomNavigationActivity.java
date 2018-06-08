@@ -15,13 +15,11 @@ import com.wmy.lib_common.base.ViewManager;
 import com.wmy.lib_common.widget.NoScrollViewPager;
 
 import java.util.List;
-
 /**
- * <p> </p>
- *
- * @author 张华洋 2017/9/27 10:23
- * @version V1.1
- * @name BottomNavigationActivity
+ * @author wmy
+ * @Description: 获取不同module  下的fragment切换 事例
+ * @FileName: BottomNavigationActivity
+ * @Date 2018/6/8/008 10:38
  */
 public class BottomNavigationActivity extends BaseActivity {
 

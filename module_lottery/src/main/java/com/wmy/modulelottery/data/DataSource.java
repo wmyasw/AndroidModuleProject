@@ -1,11 +1,13 @@
 package com.wmy.modulelottery.data;
 
 
-import com.wmy.modulelottery.bean.LotteryBean;
-import com.wmy.modulelottery.mian.LotteryPresenter;
-
 import java.util.List;
-
+/**
+ * @author wmy
+ * @Description: 定义数据接口
+ * @FileName: DataSource
+ * @Date 2018/6/8/008 10:37
+ */
 public interface DataSource<T>{
 
     interface LoadLotteryCallback<T> {

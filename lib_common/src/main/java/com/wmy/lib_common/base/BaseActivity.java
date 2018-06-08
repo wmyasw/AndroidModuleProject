@@ -11,13 +11,11 @@ import android.view.View;
 import com.wmy.lib_common.R;
 import com.wmy.lib_common.utils.Utils;
 
-
 /**
- * <p>Activity基类 </p>
- *
- * @author 2016/12/2 17:33
- * @version V1.0.0
- * @name BaseActivity
+ * @author wmy
+ * @Description: Activity基类
+ * @FileName: BaseActivity
+ * @Date 2018/6/8/008 10:14
  */
 @Keep
 public abstract class BaseActivity extends AppCompatActivity {

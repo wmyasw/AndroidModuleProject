@@ -3,11 +3,10 @@ package com.wmy.lib_common.base;
 import android.support.annotation.Keep;
 
 /**
- * <p>数据回调接口</p>
- *
- * @author wmy 2017/3/22 13:36
- * @version V1.2.0
- * @name InfoCallback
+ * @author wmy
+ * @Description: 数据回调接口
+ * @FileName: InfoCallback
+ * @Date 2018/6/8/008 10:16
  */
 @Keep
 public interface InfoCallback<T> {

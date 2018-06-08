@@ -5,11 +5,10 @@ import android.support.annotation.Keep;
 import android.view.View;
 
 /**
- * <p>类说明</p>
- *
- * @author wmy 2018/1/4 22:10
- * @version V2.8.3
- * @name IFragmentDelegate
+ * @author wmy
+ * @Description: 类说明
+ * @FileName: IViewDelegate
+ * @Date 2018/6/8/008 10:18
  */
 @Keep
 public interface IViewDelegate {

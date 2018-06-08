@@ -1,12 +1,11 @@
 package com.wmy.lib_common.base;
 
 import android.support.annotation.Keep;
-
 /**
- * <p>Presenter的基类</p>
- *
  * @author wmy
- * @name BasePresenter
+ * @Description: Presenter的基类
+ * @FileName: BasePresenter
+ * @Date 2018/6/8/008 10:15
  */
 @Keep
 public interface BasePresenter {

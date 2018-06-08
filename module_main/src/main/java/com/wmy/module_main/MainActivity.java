@@ -9,13 +9,11 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.wmy.lib_common.base.BaseActivity;
 import com.wmy.lib_common.base.ViewManager;
 import com.wmy.lib_common.utils.ToastUtils;
-
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/7/1 13:13
- * @version V1.2.0
- * @name MainActivity
+ * @author wmy
+ * @Description: 通过module路由器 定位不同module 下的activity
+ * @FileName: MainActivity
+ * @Date 2018/6/8/008 10:42
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 

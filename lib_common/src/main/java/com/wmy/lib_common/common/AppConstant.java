@@ -25,7 +25,7 @@ public class AppConstant {
     /**
      * 文件存储目录
      */
-    public static String filepath= Environment.getExternalStorageDirectory().getPath()+"/TP_photo";
+    public static String filepath= Environment.getExternalStorageDirectory().getPath()+"/AppFile";
 
 //    public static String BaseUrl="http://localhost:8080";
     public  String BaseUrl="";

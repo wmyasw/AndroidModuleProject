@@ -25,7 +25,12 @@ import com.readystatesoftware.chuck.internal.support.JsonConvertor;
 
 import java.io.Reader;
 import java.lang.reflect.Type;
-
+/**
+ * @author wmy
+ * @Description: gson 转换类
+ * @FileName: Convert
+ * @Date 2018/6/8/008 10:43
+ */
 public class Convert {
 
     private static Gson create() {

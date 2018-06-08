@@ -3,11 +3,10 @@ package com.wmy.lib_common.base;
 import android.support.annotation.Keep;
 
 /**
- * <p>类说明</p>
- *
- * @author wmy 2017/9/20 22:23
- * @version V2.8.3
- * @name ApplicationDelegate
+ * @author wmy
+ * @Description: 类说明
+ * @FileName: IApplicationDelegate
+ * @Date 2018/6/8/008 10:16
  */
 @Keep
 public interface IApplicationDelegate {

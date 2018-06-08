@@ -5,13 +5,11 @@ import com.wmy.modulelottery.data.DataSource;
 import com.wmy.modulelottery.data.LotteryDataSource;
 
 import java.util.List;
-
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/2/22 20:33
- * @version V1.2.0
- * @name GirlsPresenter
+ * @author wmy
+ * @Description: 获取彩票接口数据（当前支持的彩票列表）
+ * @FileName: LotteryPresenter
+ * @Date 2018/6/8/008 10:31
  */
 public class LotteryPresenter implements LotteryContract.Presenter {
 
@@ -32,6 +30,10 @@ public class LotteryPresenter implements LotteryContract.Presenter {
     @Override
     public void getData(int page, int size, boolean isRefresh) {
         mDataSource.getLotterys(size, page, new DataSource.LoadLotteryCallback<LotteryBean>() {
+            /**
+             * 通知观察者更新数据
+             * @param lotteryBeanList
+             */
             @Override
             public void onDataLoaded(List<LotteryBean> lotteryBeanList) {
                 if (isRefresh) {

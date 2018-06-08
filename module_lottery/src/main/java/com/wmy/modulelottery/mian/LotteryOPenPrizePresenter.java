@@ -7,11 +7,10 @@ import com.wmy.modulelottery.data.LotteryDataSource;
 import java.util.List;
 
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/2/22 20:33
- * @version V1.2.0
- * @name GirlsPresenter
+ * @author wmy
+ * @Description: 获取彩票开奖结果信息
+ * @FileName: LotteryOPenPrizePresenter
+ * @Date 2018/6/8/008 10:32
  */
 public class LotteryOPenPrizePresenter implements LotteryContract.Presenter {
 
@@ -33,6 +32,10 @@ public class LotteryOPenPrizePresenter implements LotteryContract.Presenter {
     public void getData(int page, int size, boolean isRefresh) {
         mDataSource.getLotteryOpenPrizeData(new DataSource.LoadLotteryCallback<LotteryBean>(){
 
+            /**
+             * 通知观察者更新数据
+             * @param lotteryBeanList
+             */
             @Override
             public void onDataLoaded(List<LotteryBean> lotteryBeanList) {
                 if (isRefresh) {

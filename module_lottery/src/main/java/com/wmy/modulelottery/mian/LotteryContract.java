@@ -5,13 +5,11 @@ import com.wmy.lib_common.base.BaseView;
 import com.wmy.modulelottery.bean.LotteryBean;
 
 import java.util.List;
-
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/2/22 20:33
- * @version V1.2.0
- * @name GirlsContract
+ * @author wmy
+ * @Description: 定义观察接口
+ * @FileName: LotteryContract
+ * @Date 2018/6/8/008 10:34
  */
 public interface LotteryContract {
 

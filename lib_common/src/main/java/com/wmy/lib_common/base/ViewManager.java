@@ -8,13 +8,11 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
 /**
- * <p></p>
- *
- * @author wmy 2017/9/26 22:26
- * @version V1.1
- * @name ViewManager
+ * @author wmy
+ * @Description: view管理
+ * @FileName: ViewManager
+ * @Date 2018/6/8/008 10:16
  */
 @Keep
 public class ViewManager {

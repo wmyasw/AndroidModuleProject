@@ -39,11 +39,10 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 /**
- * <p>Https证书校验工具类</p>
- *
- * @author wmy 2017/5/11 16:14
- * @version V1.2.0
- * @name HttpsUtils
+ * @author wmy
+ * @Description: Https证书校验工具类
+ * @FileName: HttpsUtils
+ * @Date 2018/6/8/008 10:18
  */
 public class HttpsUtils {
 

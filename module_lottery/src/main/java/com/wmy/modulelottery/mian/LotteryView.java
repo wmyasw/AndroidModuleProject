@@ -120,7 +120,10 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
     }
 
 
-
+    /**
+     * 通知观察者（view）更新数据
+     * @param data
+     */
     @Override
     public void refresh(List<LotteryBean> data) {
         mData.clear();
@@ -129,12 +132,19 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
         mAdapter.addAll(data);
     }
 
+    /**
+     * 加载数据
+     * @param data
+     */
     @Override
     public void load(List<LotteryBean> data) {
         mData.addAll(data);
         mAdapter.addAll(data);
     }
 
+    /**
+     * 显示错误
+     */
     @Override
     public void showError() {
         mGirlsRecyclerView.showError();
@@ -147,6 +157,9 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
         networkErrorView = mNetworkErrorLayout.inflate();
     }
 
+    /**
+     *
+     */
     @Override
     public void showNormal() {
         if (networkErrorView != null) {
@@ -154,7 +167,9 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
         }
     }
 
-
+    /**
+     * 加载更多
+     */
     @Override
     public void onLoadMore() {
         if (mData.size() % size == 0) {
@@ -163,6 +178,9 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
         }
     }
 
+    /**
+     * 刷新数据
+     */
     @Override
     public void onRefresh() {
         mPresenter.getData(size, page, true);

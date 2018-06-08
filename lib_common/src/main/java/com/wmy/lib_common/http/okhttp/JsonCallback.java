@@ -8,11 +8,12 @@ import java.lang.reflect.Type;
 
 import okhttp3.Response;
 
-
 /**
- * Created by Administrator on 2018/4/24/024.
+ * @author wmy
+ * @Description: 定义jsoncallback 获取json返回数据
+ * @FileName: JsonCallback
+ * @Date 2018/6/8/008 10:41
  */
-
 public abstract class JsonCallback<T> extends  AbsCallback<T>  {
 
 

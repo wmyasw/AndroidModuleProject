@@ -15,6 +15,12 @@ import com.wmy.lib_common.http.OnResultListener;
 import com.wmy.lib_common.http.okhttp.JsonCallback;
 import com.wmy.modulelottery.bean.LotteryBean;
 
+/**
+ * @author wmy
+ * @Description: 实现公共数据接口
+ * @FileName: LotteryDataSource
+ * @Date 2018/6/8/008 10:39
+ */
 public class LotteryDataSource implements DataSource {
 
 
@@ -52,7 +58,6 @@ public class LotteryDataSource implements DataSource {
                     @Override
                     public void onError(Response<ResultEntity<ResultBean<LotteryBean>>> response) {
                         super.onError(response);
-
                     }
 
                     @Override

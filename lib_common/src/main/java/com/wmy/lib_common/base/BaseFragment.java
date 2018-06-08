@@ -9,10 +9,10 @@ import com.wmy.lib_common.utils.Utils;
 
 
 /**
- * <p>Fragment的基类</p>
- *
  * @author wmy
- * @name BaseFragment
+ * @Description: Fragment的基类
+ * @FileName: BaseFragment
+ * @Date 2018/6/8/008 10:14
  */
 @Keep
 public abstract class BaseFragment extends Fragment {
