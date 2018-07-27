@@ -56,7 +56,7 @@ public class BaseApplication extends Application {
         for (IApplicationDelegate delegate : mAppDelegateList) {
             delegate.onCreate();
         }
-
+        initOkGo();
     }
 
     @Override

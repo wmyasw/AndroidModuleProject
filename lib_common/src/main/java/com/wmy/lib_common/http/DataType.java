@@ -24,7 +24,7 @@ public class DataType {
     public static final int JSON_ARRAY = 4;
 
     /**
-     * 自定义一个播放器状态注解
+     * 定义一个状态注解
      */
     @Retention(RetentionPolicy.SOURCE)
     @IntDef({STRING, XML, JSON_OBJECT, JSON_ARRAY})

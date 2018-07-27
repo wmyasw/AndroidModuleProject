@@ -12,7 +12,7 @@ import com.wmy.module_login.Constants;
 /**
  * <p>类说明</p>
  *
- * @author 张华洋 2017/2/15 20:11
+ * @author wmy 2017/2/15 20:11
  * @version V1.2.0
  * @name NewsApplication
  */

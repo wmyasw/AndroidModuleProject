@@ -3,7 +3,7 @@
           package="com.wmy.caipiaomodule">
 
     <application
-        android:name="com.wmy.caipiaomodule.MyApplication"
+
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

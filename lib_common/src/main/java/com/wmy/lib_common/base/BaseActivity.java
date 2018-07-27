@@ -24,10 +24,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     /**
      * 封装的findViewByID方法
      */
-    @SuppressWarnings("unchecked")
-    protected <T extends View> T $(@IdRes int id) {
-        return (T) super.findViewById(id);
-    }
+//    @SuppressWarnings("unchecked")
+//    protected <T extends View> T $(@IdRes int id) {
+//        return (T) super.findViewById(id);
+//    }
 
 
     @Override

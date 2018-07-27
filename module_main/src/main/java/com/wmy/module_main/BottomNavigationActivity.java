@@ -73,6 +73,7 @@ public class BottomNavigationActivity extends BaseActivity {
      *
      * @return Fragment
      */
+
     private BaseFragment getNewsFragment() {
         BaseFragment newsFragment = null;
         List<IViewDelegate> viewDelegates = ClassUtils.getObjectsWithInterface(this, IViewDelegate.class, "com.guiying.module.news");
