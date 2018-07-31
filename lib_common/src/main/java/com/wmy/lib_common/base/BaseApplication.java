@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
+import javax.inject.Inject;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.X509TrustManager;
@@ -40,7 +41,6 @@ public class BaseApplication extends Application {
     private static BaseApplication sInstance;
 
     private List<IApplicationDelegate> mAppDelegateList;
-
 
     public static BaseApplication getIns() {
         return sInstance;

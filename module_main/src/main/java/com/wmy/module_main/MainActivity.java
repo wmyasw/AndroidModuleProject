@@ -32,10 +32,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View view) {
         if (view.getId() == R.id.news_button) {
             //跳转到NewsCenterActivity
-            ARouter.getInstance().build( "/lotter/openPrize").navigation();
-        } else if (view.getId() == R.id.girls_button) {
-            //跳转到GirlsActivity
+//            ARouter.getInstance().build( "/lotter/openPrize").navigation();
             ARouter.getInstance().build("/lotter/list").navigation();
+        } else if (view.getId() == R.id.girls_button) {
+            //跳转到LotterActivity
+//            ARouter.getInstance().build("/lotter/list").navigation();
+            ARouter.getInstance().build("/settings/setting").navigation();
         } else if (view.getId() == R.id.fragment_button) {
             startActivity(new Intent(this, BottomNavigationActivity.class));
         }

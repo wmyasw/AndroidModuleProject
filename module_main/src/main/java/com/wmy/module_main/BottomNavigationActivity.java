@@ -76,7 +76,7 @@ public class BottomNavigationActivity extends BaseActivity {
 
     private BaseFragment getNewsFragment() {
         BaseFragment newsFragment = null;
-        List<IViewDelegate> viewDelegates = ClassUtils.getObjectsWithInterface(this, IViewDelegate.class, "com.guiying.module.news");
+        List<IViewDelegate> viewDelegates = ClassUtils.getObjectsWithInterface(this, IViewDelegate.class, "com.wmy.modulelottery.frament");
         if (viewDelegates != null && !viewDelegates.isEmpty()) {
             newsFragment = viewDelegates.get(0).getFragment("");
         }
