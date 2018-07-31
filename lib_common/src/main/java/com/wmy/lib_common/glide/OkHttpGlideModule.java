@@ -8,7 +8,18 @@ import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.engine.bitmap_recycle.LruBitmapPool;
 import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.engine.cache.MemorySizeCalculator;
+import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.GlideModule;
+import com.wmy.lib_common.base.BaseApplication;
+import com.wmy.lib_common.http.HttpsUtils;
+import com.wmy.lib_common.http.okhttp.HTTPSUtils;
+
+import java.io.InputStream;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
+
+import okhttp3.OkHttpClient;
 
 /**
  * A {@link GlideModule} implementation to replace Glide's default
@@ -40,7 +51,7 @@ public class OkHttpGlideModule implements GlideModule {
 
     @Override
     public void registerComponents(Context context, Glide glide) {
-//        HttpsUtil.SSLParams sslParams = HttpsUtil.getSslSocketFactory(BaseApplication.context, null, , "");
+//        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(context, "", "", "");
 //        OkHttpClient okHttpClient = new OkHttpClient.Builder()
 //                .sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager)
 //                .hostnameVerifier(new HostnameVerifier() {
@@ -51,5 +62,6 @@ public class OkHttpGlideModule implements GlideModule {
 //                })
 //                .build();
 //        glide.register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(okHttpClient));
+        glide.register(GlideUrl.class, InputStream.class, new OkHttpUrlLoader.Factory(new HTTPSUtils(context).getInstance()));
     }
 }
