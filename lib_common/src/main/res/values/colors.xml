@@ -72,4 +72,6 @@
     <color name="invoice_select">#656566</color>
     <color name="person_center_line">#2E2F31</color>
     <color name="imagePage_bg">#c0000000</color>
+    <color name="search_bg">#FF313132</color>
+    <color name="tab_text_color">#df871b</color>
 </resources>

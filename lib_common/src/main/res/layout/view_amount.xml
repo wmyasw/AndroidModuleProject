@@ -17,7 +17,7 @@
         android:gravity="center"
         android:text="-"
         android:textColor="@color/product_text_hit"
-        android:textSize="@dimen/textsize_32"/>
+        android:textSize="18sp"/>
 
     <TextView
         android:id="@+id/etAmount"
@@ -41,5 +41,5 @@
         android:gravity="center"
         android:text="+"
         android:textColor="@color/product_text_hit"
-        android:textSize="@dimen/textsize_32"/>
+        android:textSize="18sp"/>
 </LinearLayout>
