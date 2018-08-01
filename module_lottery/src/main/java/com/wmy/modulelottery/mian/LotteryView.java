@@ -96,6 +96,7 @@ public class LotteryView extends FrameLayout implements LotteryContract.View<Lot
     }
 
 
+    //是否加载完毕 （同resume 但只调用一次）
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
