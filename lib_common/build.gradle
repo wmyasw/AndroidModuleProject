@@ -72,6 +72,8 @@ dependencies {
     api deps.imagepicker
     //router
     api deps.arouter_api
+    //必须使用
+//    api "com.lzy.net:okgo:3.0.4"
 //    api deps.guava
     //annotationProcessor
     annotationProcessor deps.dagger.android_support_compiler

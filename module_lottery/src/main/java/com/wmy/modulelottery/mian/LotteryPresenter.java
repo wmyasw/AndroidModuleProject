@@ -47,7 +47,8 @@ public class LotteryPresenter implements LotteryContract.Presenter {
 
             @Override
             public void onDataNotAvailable() {
-
+//                mView.showNormal();
+                mView.showError();
             }
         });
     }

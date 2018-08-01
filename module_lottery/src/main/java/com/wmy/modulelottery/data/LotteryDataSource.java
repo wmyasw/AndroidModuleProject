@@ -13,6 +13,7 @@ import com.wmy.lib_common.entity.ResultBean;
 import com.wmy.lib_common.entity.ResultEntity;
 import com.wmy.lib_common.http.OnResultListener;
 import com.wmy.lib_common.http.okhttp.JsonCallback;
+import com.wmy.lib_common.utils.LogUtils;
 import com.wmy.modulelottery.bean.LotteryBean;
 
 /**
@@ -35,7 +36,8 @@ public class LotteryDataSource implements DataSource {
                     @Override
                     public void onError(Response<ResultEntity<ResultBean<LotteryBean>>> response) {
                         super.onError(response);
-
+                        LogUtils.d("LotteryDataSource", "getLotterys :" + response);
+                        callback.onDataNotAvailable();
                     }
 
                     @Override
@@ -58,10 +60,14 @@ public class LotteryDataSource implements DataSource {
                     @Override
                     public void onError(Response<ResultEntity<ResultBean<LotteryBean>>> response) {
                         super.onError(response);
+                        LogUtils.d("LotteryDataSource", "getLotteryOpenPrizeData :" + response);
+                        if (callback != null)
+                         callback.onDataNotAvailable();
                     }
 
                     @Override
                     public void onSuccess(Response<ResultEntity<ResultBean<LotteryBean>>> response) {
+                        com.blankj.utilcode.util.LogUtils.d(response);
                         if (callback != null)
                             callback.onDataLoaded(response.body().getShowapi_res_body().getResult());
                     }

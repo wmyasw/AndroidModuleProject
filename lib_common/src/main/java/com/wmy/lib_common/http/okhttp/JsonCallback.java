@@ -2,6 +2,7 @@ package com.wmy.lib_common.http.okhttp;
 
 import com.lzy.okgo.callback.AbsCallback;
 import com.lzy.okgo.request.base.Request;
+import com.wmy.lib_common.utils.LogUtils;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -14,7 +15,7 @@ import okhttp3.Response;
  * @FileName: JsonCallback
  * @Date 2018/6/8/008 10:41
  */
-public abstract class JsonCallback<T> extends  AbsCallback<T>  {
+public abstract class JsonCallback<T> extends AbsCallback<T> {
 
 
     private Type type;
@@ -32,6 +33,13 @@ public abstract class JsonCallback<T> extends  AbsCallback<T>  {
     }
 
     @Override
+    public void onError(com.lzy.okgo.model.Response<T> response) {
+        super.onError(response);
+        LogUtils.d("onError", "response :" + response);
+
+    }
+
+    @Override
     public void onStart(Request<T, ? extends Request> request) {
         super.onStart(request);
         // 主要用于在所有请求之前添加公共的请求头或请求参数
@@ -43,6 +51,7 @@ public abstract class JsonCallback<T> extends  AbsCallback<T>  {
 //                .params("params1", "ParamsValue1")//
 //                .params("token", "3215sdf13ad1f65asd4f3ads1f");
     }
+
 
     /**
      * 该方法是子线程处理，不能做ui相关的工作
@@ -57,7 +66,6 @@ public abstract class JsonCallback<T> extends  AbsCallback<T>  {
         // 重要的事情说三遍，不同的业务，这里的代码逻辑都不一样，如果你不修改，那么基本不可用
 
         //详细自定义的原理和文档，看这里： https://github.com/jeasonlzy/okhttp-OkGo/wiki/JsonCallback
-
         if (type == null) {
             if (clazz == null) {
                 Type genType = getClass().getGenericSuperclass();
@@ -67,7 +75,6 @@ public abstract class JsonCallback<T> extends  AbsCallback<T>  {
                 return convert.convertResponse(response);
             }
         }
-
         JsonConvert<T> convert = new JsonConvert<>(type);
         return convert.convertResponse(response);
     }
