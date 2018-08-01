@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
+import android.util.Log;
 import android.view.MenuItem;
 
 
@@ -12,6 +13,7 @@ import com.wmy.lib_common.base.BaseFragment;
 import com.wmy.lib_common.base.ClassUtils;
 import com.wmy.lib_common.base.IViewDelegate;
 import com.wmy.lib_common.base.ViewManager;
+import com.wmy.lib_common.utils.LogUtils;
 import com.wmy.lib_common.widget.NoScrollViewPager;
 
 import java.util.List;
@@ -59,8 +61,9 @@ public class BottomNavigationActivity extends BaseActivity {
 
     private void initViewPager() {
         mFragments = ViewManager.getInstance().getAllFragment();//这几个Fragment是主动添加到ViewManager中的
-//        BaseFragment newsFragment = getNewsFragment();//主动寻找
+//        BaseFragment newsFragment = getNewsFragment()l;//主动寻找
 //        mFragments.add(newsFragment);
+        LogUtils.d("initViewPager","mFragments"+mFragments.size());
         mPager = (NoScrollViewPager) findViewById(R.id.container_pager);
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), mFragments);
         mPager.setPagerEnabled(false);
