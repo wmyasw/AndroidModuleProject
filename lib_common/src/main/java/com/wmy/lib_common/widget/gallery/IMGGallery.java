@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Gallery;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.wmy.lib_common.R;
 import com.wmy.lib_common.utils.LogUtils;
@@ -117,15 +118,14 @@ public class IMGGallery extends Gallery implements AdapterView.OnItemSelectedLis
     }
 
     public IMGGallery(Context paramContext, AttributeSet paramAttributeSet) {
-        super(paramContext, paramAttributeSet);
-//		timer.schedule(task, 5000, 5000);
+        this(paramContext, paramAttributeSet,0);
 
     }
 
     public IMGGallery(Context paramContext, AttributeSet paramAttributeSet,
                       int paramInt) {
         super(paramContext, paramAttributeSet, paramInt);
-//		timer.schedule(task, 5000, 5000);
+        indicator_container=new LinearLayout(this.getContext());
 
     }
 
@@ -189,7 +189,8 @@ public class IMGGallery extends Gallery implements AdapterView.OnItemSelectedLis
      * 有背景 圆角 的text
      */
     private void InitFocusIndicatorContainerText(int position) {
-        if (indicator_container == null) return;
+        if (indicator_container == null)
+            indicator_container=new LinearLayout(this.getContext());
         position = position % getAdapter().getCount();
         if (getAdapter().getCount() > 1) {
             // 修改上一次选中项的背景

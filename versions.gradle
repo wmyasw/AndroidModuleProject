@@ -11,7 +11,7 @@ versions.support = "27.0.2"
 versions.multidex = "1.0.2"
 versions.constraint_layout = "1.1.0"
 versions.dagger = "2.11"
-versions.glide = "3.8.0"
+versions.glide = "4.3.1"
 versions.rxjava2 = "2.1.7"
 versions.rx_android = "2.0.1"
 versions.retrofit = "2.3.0"
@@ -128,7 +128,7 @@ deps.permission = "com.yanzhenjie:permission:$versions.permission"
 ext.deps = deps
 
 def build_versions = [:]
-build_versions.min_sdk = 16
+build_versions.min_sdk = 21
 build_versions.target_sdk = 27
 build_versions.build_tools = "27.0.2"
 ext.build_versions = build_versions

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.wmy.caipiaomodule">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wmy.caipiaomodule">
 
     <application
+        tools:replace="icon,allowBackup,label,theme"
         android:name=".MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"

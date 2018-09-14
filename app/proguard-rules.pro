@@ -151,7 +151,7 @@
 #---------------------------------第三方库及jar包-------------------------------
 
 #litepal数据库不能被混淆
--keep class org.litepal.** {*;}
+-keep class org.litepal.** {*;}d
 -keep class * extends org.litepal.crud.DataSupport {*;}
 
 #Glide不能被混淆
@@ -354,3 +354,14 @@ public void xxxxxx(**);
 -keep class android.support.design.** { *; }
 -keep interface android.support.design.** { *; }
 -keep public class android.support.design.R$* { *; }
+
+
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+# banner 的混淆代码
+-keep class com.youth.banner.** {
+    *;
+ }

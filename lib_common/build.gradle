@@ -25,6 +25,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs'] /**在libs文件夹下找so文件*/
+        }
+    }
 
 }
 
@@ -72,6 +77,31 @@ dependencies {
     api deps.imagepicker
     //router
     api deps.arouter_api
+    api "com.github.bumptech.glide:glide:4.3.1"
+//    api 'com.google.android.exoplayer:exoplayer:2.8.2'
+//    api 'com.google.android.exoplayer:exoplayer-core:2.8.2'
+//    api 'com.google.android.exoplayer:exoplayer-dash:2.8.2'
+//    api 'com.google.android.exoplayer:exoplayer-ui:2.8.2'
+
+    // required, enough for most devices.
+//    # required, enough for most devices.
+//    api 'com.shuyu:GSYVideoPlayer:5.0.2'
+    api 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+//    api 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+//
+////    # Other ABIs: optional
+//    api 'tv.danmaku.ijk.media:ijkplayer-armv5:0.8.8'
+//    api 'tv.danmaku.ijk.media:ijkplayer-arm64:0.8.8'
+//    api 'tv.danmaku.ijk.media:ijkplayer-x86:0.8.8'
+//    api 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.8.8'
+
+//    # ExoPlayer as IMediaPlayer: optional, experimental
+    api 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+
+    api 'com.youth.banner:banner:1.4.10'  //最新版本
+
+    api 'liang.lollipop.rvbannerlib:rvbannerlib:1.1.0'
+    api 'com.ryane.banner:banner-lib:0.7'
     //必须使用
 //    api "com.lzy.net:okgo:3.0.4"
 //    api deps.guava

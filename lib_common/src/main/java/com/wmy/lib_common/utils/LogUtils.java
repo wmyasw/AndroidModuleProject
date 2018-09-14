@@ -15,6 +15,7 @@ public class LogUtils {
 	
 	/**日志输出级别 0为不输出*/
 	private static int logMode = Log.ERROR;
+	private static String TAG="LogUtils";
 	
 	/**
 	 * 输出Error信息
@@ -77,6 +78,11 @@ public class LogUtils {
 				Log.d(tag, msg!=null?msg:"");
 	}
 
+	public static void d(String msg){
 
+		if (BuildConfig.DEBUG)
+			if (Log.DEBUG <= logMode)
+				Log.d(TAG, msg!=null?msg:"");
+	}
 
 }
